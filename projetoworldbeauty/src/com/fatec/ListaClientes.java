@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Random;
 //import java.util.Collections;
 
+@SuppressWarnings("serial")
 public class ListaClientes implements Serializable{
 	// cria uma lista com os clientes para que possamos fazer a busca, modificar e deletar
 	
@@ -16,6 +17,7 @@ public class ListaClientes implements Serializable{
 	
 	String separador = "###############";
 	
+	/*insere o cliente na lista*/
 	public void insere(Cliente cliente) {
 		clientes.add(cliente);
 	}
@@ -43,7 +45,7 @@ public class ListaClientes implements Serializable{
 		}
 		System.out.println("Nao encontrado.");
 	}
-	
+	/*cria um novo cliente*/
 	public Cliente novoCliente() {
 		Cliente c = new Cliente();
 		int ID = geraID();
@@ -68,10 +70,8 @@ public class ListaClientes implements Serializable{
 	
 	//gera um numero de id aleatorio para idnetificar cada cliente
 	public int geraID(){
-		int a = random.nextInt(1000);
-		int b = random.nextInt(1000);
-		int id = a + b;//a soma de dois numeros aleatorios tambem sera aleatoria
-		return id;     //assim evitamos numeros repetidos
+		int id = random.nextInt(1000);
+		return id;
 	}
 	
 	public void salvarLista() throws Exception {

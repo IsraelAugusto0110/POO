@@ -11,6 +11,7 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class EscritorLeitor{
 	
 	static String caminho = "C:\\Users\\israelaugusto\\Desktop\\Clientes.txt";

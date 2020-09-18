@@ -28,7 +28,6 @@ public class Principal {
 		
 		while(escolha != 7) {
 			escolha = controle.opcao();
-				//System.gc(); coletor de lixo do sistema garbage collection
 			
 			switch (escolha) {
 			case 1:
@@ -57,8 +56,6 @@ public class Principal {
 				break;
 				
 			case 5:
-				/*Serializar um objeto-transformar em representaçao binaria
-				 * dai é possivel salva-lo em hd*/
 				lista.salvarLista();
 				break;
 				

@@ -1,7 +1,10 @@
 package com.fatec;
 
-public class Cliente{
+import java.io.Serializable;
 
+@SuppressWarnings("serial")
+public class Cliente implements Serializable{
+	//define as informações basicas de cada cliente
 	public String id, nome;
 	
 	@Override
@@ -25,6 +28,5 @@ public class Cliente{
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 	
 }
