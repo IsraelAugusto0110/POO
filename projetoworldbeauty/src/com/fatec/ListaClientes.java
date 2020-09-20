@@ -74,11 +74,18 @@ public class ListaClientes implements Serializable{
 		return id;
 	}
 	
+	/*Converte cada cliente da lista 'clientes' em uma string e entao
+	 *adiciona em clientesString. No fim do loop, converte a lista em 
+	 *uma unica string e usa o metodo escrever para salvar os dados.
+	 *Nao é muito eficiente ou bonito, mas funciona :)*/
 	public void salvarLista() throws Exception {
+		ArrayList<String> clientesString = new ArrayList<String>();
 		for (Cliente c : this.clientes) {
 			String cliente = "Id: " + c.id + ", Nome: " + c.nome;
-			EscritorLeitor.escrever(cliente);
+			clientesString.add(cliente);
 		}
+		String clienteslista = clientesString.toString();
+		EscritorLeitor.escrever(clienteslista);
 		System.out.println("Salvo com sucesso");
 	}
 }
