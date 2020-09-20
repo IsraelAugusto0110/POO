@@ -11,7 +11,7 @@
  2. Ediçao de cliente : feito;
  3. Exclusao de cadastro : feito;
  4. Listagem dos clientes : feito;
- 5. Salvar em arquivo(persistência dos dados) : em andamento;
+ 5. Salvar em arquivo(persistência dos dados) : feito;
  6. Ler dados em arquivo: em andamento;
 
  Por enquanto o cadastro de um novo cliente possui apenas o nome que é digitado pelo usuario e um id que é gerado de forma aleatoria.
