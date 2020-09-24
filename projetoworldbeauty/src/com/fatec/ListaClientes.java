@@ -68,7 +68,7 @@ public class ListaClientes implements Serializable{
 		}
 	}
 	
-	//gera um numero de id aleatorio para idnetificar cada cliente
+	//gera um numero de id aleatorio para identificar cada cliente
 	public int geraID(){
 		int id = random.nextInt(1000);
 		return id;
