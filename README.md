@@ -1,7 +1,7 @@
 # POO
  Programaçao orientada a Objetos com Java
 
- ## Projeto World Beauty
+ ## L1 - Projeto World Beauty
 
  Este projeto é uma atividade pratica a ser desenvolvida por nos, alunos do 3 semestre de analise de sistemas,
  cujo objetivo é planejar e desenvolver uma aplicaçao em java que simule um sistema de cadastro de clientes para
