@@ -2,6 +2,7 @@ package com.fatec;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 //import java.util.Collections;
 
@@ -88,4 +89,21 @@ public class ListaClientes implements Serializable{
 		EscritorLeitor.escrever(clienteslista);
 		System.out.println("Salvo com sucesso");
 	}
+	
+	/*Cria lista alfabeticamente ordenada dos clientes*/
+	public void listarOrdem() {
+		ArrayList<String> clientesString = new ArrayList<String>();
+		for(Cliente c : this.clientes) {
+			String cliente = c.nome;
+			clientesString.add(cliente);
+		}
+		
+		System.out.println("Criando lista em ordem alfabetica");
+		Collections.sort(clientesString);
+		
+		for(String s : clientesString) {
+			System.out.println(s);
+		}
+	}
+	
 }

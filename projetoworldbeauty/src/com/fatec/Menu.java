@@ -16,6 +16,7 @@ public class Menu {
 	public static void subMenu() {
 		System.out.println("1. Todos os clientes");
 		System.out.println("2. Em ordem alfabetica");
+		System.out.println("3. Em ordem por genero");
 		System.out.print("Escolha a opçao desejada: ");
 	}
 }

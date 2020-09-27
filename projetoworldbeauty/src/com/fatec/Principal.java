@@ -26,6 +26,8 @@ public class Principal {
 		
 		String cliente;
 		
+		DataBase db = new DataBase();
+		
 		while(escolha != 7) {
 			escolha = controle.opcao();
 			
@@ -52,6 +54,8 @@ public class Principal {
 				int op = controle.opcao();
 				if(op == 1) {
 					lista.imprimeLista();
+				} else if(op == 2) {
+					lista.listarOrdem();
 				}
 				break;
 				
@@ -72,7 +76,6 @@ public class Principal {
 			}
 		}
 
-		lista.imprimeLista();
 		System.out.println("Fim");
 	}
 
