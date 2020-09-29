@@ -16,3 +16,7 @@
 
  Por enquanto o cadastro de um novo cliente possui apenas o nome que é digitado pelo usuario e um id que é gerado de forma aleatoria. Adicionado no menu opçao de listagem em ordem alfabetica.
 
+ ## L2 - Loja de carros
+
+ Desenvolver sistema de cadastro de uma concessionaria de automoveis.
+
