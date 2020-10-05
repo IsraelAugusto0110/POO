@@ -1,6 +1,7 @@
 package com.fatec;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -21,15 +22,6 @@ public class ListaClientes implements Serializable{
 	/*insere o cliente na lista*/
 	public void insere(Cliente cliente) {
 		clientes.add(cliente);
-	}
-	
-	public void imprimeLista() {
-		System.out.println(separador);
-		for(Cliente c: clientes) {
-			System.out.println(c);
-		}
-		System.out.println(" ");
-		System.out.println(separador);
 	}
 	
 	public int getSize() {
@@ -56,6 +48,41 @@ public class ListaClientes implements Serializable{
 		controle = new Controle();
 		return c;
 	}
+	
+	public ArrayList<String> insereProdutos(){
+		ArrayList<String> lst = new ArrayList<String>();
+		int resp = 1;
+		while(resp != 0) {
+			Menu.subMenu();
+			System.out.print("Escolha um dos items: ");
+			int item = controle.opcao();
+			switch (item) {
+				case 1:
+					lst.add("Manicure");
+					break;
+				case 2:
+					lst.add("Pedicure");
+					break;
+				case 3:
+					lst.add("Design de sobrancelhas");
+					break;
+				case 4:
+					lst.add("Cabelo Femenino");
+					break;
+				case 5:
+					lst.add("Cabelo Masculino");
+					break;
+				case 6:
+					lst.add("Outros");
+					break;
+				default:
+					break;
+				}
+			System.out.print("Deseja continuar? 1. Sim 0. Nao: ");
+			resp = controle.opcao();
+		}
+		return lst;	
+	}
 
 	public void modifica(String id) {
 		for(Cliente c: this.clientes) {
@@ -70,6 +97,8 @@ public class ListaClientes implements Serializable{
 	}
 	
 	//gera um numero de id aleatorio para identificar cada cliente
+	// isso serve para facilitar a busca, edicao e remoçao de clientes
+	// pois pelo nome pode ocorrer o usuario errar na digitaçao
 	public int geraID(){
 		int id = random.nextInt(1000);
 		return id;
@@ -82,7 +111,8 @@ public class ListaClientes implements Serializable{
 	public void salvarLista() throws Exception {
 		ArrayList<String> clientesString = new ArrayList<String>();
 		for (Cliente c : this.clientes) {
-			String cliente = "Id: " + c.id + ", Nome: " + c.nome;
+			String cliente = "Id: " + c.id + ", Nome: " + c.nome + 
+					", produtos/serviços: " + c.produtos;
 			clientesString.add(cliente);
 		}
 		String clienteslista = clientesString.toString();
@@ -91,19 +121,16 @@ public class ListaClientes implements Serializable{
 	}
 	
 	/*Cria lista alfabeticamente ordenada dos clientes*/
-	public void listarOrdem() {
+	public void ordenarLista() {
 		ArrayList<String> clientesString = new ArrayList<String>();
 		for(Cliente c : this.clientes) {
-			String cliente = c.nome;
+			String cliente = c.nome + c.produtos;
 			clientesString.add(cliente);
 		}
-		
-		System.out.println("Criando lista em ordem alfabetica");
 		Collections.sort(clientesString);
-		
+		System.out.println("Imprimindo todos em ordem");
 		for(String s : clientesString) {
 			System.out.println(s);
 		}
 	}
-	
 }

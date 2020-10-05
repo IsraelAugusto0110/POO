@@ -7,7 +7,8 @@ public class Menu {
 		System.out.println("3. Nova compra");
 		System.out.println("4. Agendar serviço");
 		System.out.println("5. Cancelar agendamento");
-		System.out.println("6. Sair");
+		System.out.println("6. Salvar relatorios");
+		System.out.println("7. Sair");
 		System.out.print("Escolha a opçao desejada: ");
 	}
 }

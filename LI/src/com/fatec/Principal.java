@@ -28,7 +28,7 @@ public class Principal {
 		
 		DataBase db = new DataBase();
 		
-		while(escolha != 7) {
+		while(escolha != 8) {
 			escolha = controle.opcao();
 			
 			switch (escolha) {
@@ -50,13 +50,7 @@ public class Principal {
 				break;
 				
 			case 4:
-				Menu.subMenu();
-				int op = controle.opcao();
-				if(op == 1) {
-					lista.imprimeLista();
-				} else if(op == 2) {
-					lista.listarOrdem();
-				}
+				lista.ordenarLista();
 				break;
 				
 			case 5:
@@ -66,12 +60,15 @@ public class Principal {
 			case 6:
 				EscritorLeitor.ler();
 				break;
+			case 7:
+				lista.insereProdutos();
+				break;
 				
 			default:
 				break;
 			}
 			System.out.println();
-			if(escolha != 7) {
+			if(escolha != 8) {
 				Menu.mostraMenu();
 			}
 		}

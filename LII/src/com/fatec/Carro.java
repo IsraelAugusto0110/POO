@@ -8,11 +8,18 @@ public class Carro {
 	public String numeroPlaca, modeloVersao;
 	public int anoFabricacao;
 	public double valorCompra;
+	EscritorLeitor el = new EscritorLeitor();
 	
 	Controle controle = new Controle();
 	
 	static ArrayList<String> listaCarros = new ArrayList<String>();
 	
+	public static ArrayList<String> getListaCarros() {
+		return listaCarros;
+	}
+	public static void setListaCarros(ArrayList<String> listaCarros) {
+		Carro.listaCarros = listaCarros;
+	}
 	public String getNumeroPlaca() {
 		return numeroPlaca;
 	}
@@ -67,5 +74,10 @@ public class Carro {
 		for(String s : listaCarros) {
 			System.out.println(s);
 		}
+	}
+	
+	public void escreverCarro() throws Exception {
+		String texto = "" + this.getListaCarros();
+		EscritorLeitor.escreverCarro(texto);
 	}
 }

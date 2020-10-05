@@ -1,11 +1,14 @@
 package com.fatec;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class Cliente implements Serializable{
 	//define as informações basicas de cada cliente
 	public String id, nome;
+	
+	public static ArrayList<String> produtos = new ArrayList<String>();
 	
 	@Override
 	public String toString() {
@@ -28,5 +31,4 @@ public class Cliente implements Serializable{
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 }

@@ -6,11 +6,22 @@ public class Compra {
 	Cliente cliente = new Cliente();
 	Carro carro = new Carro();
 	Controle controle = new Controle();
+	EscritorLeitor el = new EscritorLeitor();
 	
 	public String client, car;
 	
 	static ArrayList<String> compras = new ArrayList<String>();
 	
+	
+	
+	public static ArrayList<String> getCompras() {
+		return compras;
+	}
+
+	public static void setCompras(ArrayList<String> compras) {
+		Compra.compras = compras;
+	}
+
 	public String novaCompra() {
 		System.out.println("Insira os dados do Cliente: ");
 		System.out.print("Nome: ");
@@ -33,6 +44,11 @@ public class Compra {
 		for(String s : compras) {
 			System.out.println(s + "\n");
 		}
+	}
+	
+	public void escreverCompra() throws Exception{
+		String lista = "" + this.getCompras();
+		EscritorLeitor.escreverVenda(lista);
 	}
 	
 }

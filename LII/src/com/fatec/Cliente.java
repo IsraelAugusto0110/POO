@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Cliente {
 	public String nome, telefone, endereco, cpf;
 	Carro carro = new Carro();
+	EscritorLeitor el = new EscritorLeitor();
 
 	public String getNome() {
 		return nome;
@@ -45,6 +46,16 @@ public class Cliente {
 	
 	static ArrayList<String> listaClientes = new ArrayList<String>();
 	
+	
+	
+	public static ArrayList<String> getListaClientes() {
+		return listaClientes;
+	}
+
+	public static void setListaClientes(ArrayList<String> listaClientes) {
+		Cliente.listaClientes = listaClientes;
+	}
+
 	Controle controle = new Controle();
 	
 	public void insereNovoCliente() {
@@ -70,6 +81,11 @@ public class Cliente {
 		for(String s : listaClientes) {
 			System.out.println(s);
 		}
+	}
+	
+	public void escreverCliente() throws Exception {
+		String lista = "" + this.getListaClientes();
+		EscritorLeitor.escreverCliente(lista);
 	}
 	
 }

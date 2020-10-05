@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Principal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		Controle controle = new Controle();
 		Cliente cliente = new Cliente();
@@ -14,11 +14,12 @@ public class Principal {
 		Compra compra = new Compra();
 		Agenda agenda = new Agenda();
 		
+		
 		int escolha = 0;
 		
 		Menu.mostraMenu();
 		
-		while(escolha != 6) {
+		while(escolha != 7) {
 			escolha = controle.opcao();
 			
 			switch (escolha) {
@@ -44,20 +45,32 @@ public class Principal {
 			case 5:
 				agenda.cancelarAgenda();
 				break;
+			case 6:
+				cliente.escreverCliente();
+				carro.escreverCarro();
+				compra.escreverCompra();
+				agenda.escreverServicos();
+				System.out.println("Salvo com sucesso.");
+				break;
 
 			default:
 				break;
 			}
 			System.out.println();
-			if(escolha != 6) {
+			if(escolha != 7) {
 				Menu.mostraMenu();
 			}
 		}
-		Cliente.imprimeLista();
-		Carro.imprimelista();
-		Compra.imprimeLista();
-		agenda.imprimeLista();
-		System.out.println();
+		
+		System.out.println("Imprimindo relatorios...\n");
+		System.out.println("Novos clientes:");
+		EscritorLeitor.lerClientes();
+		System.out.println("\nCarros no estoque:");
+		EscritorLeitor.lerCarros();
+		System.out.println("\nNovas compras:");
+		EscritorLeitor.lerVendas();
+		System.out.println("\nServiços:");
+		EscritorLeitor.lerServicos();
 		System.out.println("Obrigado.");
 		
 	}

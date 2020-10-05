@@ -14,9 +14,11 @@ public class Menu {
 	}
 	
 	public static void subMenu() {
-		System.out.println("1. Todos os clientes");
-		System.out.println("2. Em ordem alfabetica");
-		System.out.println("3. Em ordem por genero");
-		System.out.print("Escolha a opçao desejada: ");
+		System.out.println("1. Manicure");
+		System.out.println("2. Pedicure");
+		System.out.println("3. Design de sobrancelha");
+		System.out.println("4. Cabelo Femenino");
+		System.out.println("5. Cabelo Masculino");
+		System.out.println("6. Outros");
 	}
 }
