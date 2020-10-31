@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+}
+#idec{
+  color:#173cd6;
+  margin:0 0 0 17px;
+  padding:0 21px 24px 19px;
+}
+#ih6u{
+  margin:21.44px 0 34.44px 3px;
+  padding:0 0 0 437px;
+}
+#iw2x4{
+  padding:0 0 0 438px;
+}

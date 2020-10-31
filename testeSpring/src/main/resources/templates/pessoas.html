@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Amigos</title>
+		<link rel="stylesheet" href="pessoas.css" media="screen">
 	</head>
 	<body>
-		<h1><a th:href="@{/}">Voltar</a></h1><br/>
-		<h1>Lista de pessoas</h1><br/>
+		<h1 id="ik8t"><a th:href="@{/}" id="idec">Voltar</a></h1><br/>
+		<h1 id="ih6u">Lista de pessoas</h1><br/>
 		<div th:each="p:${listaPessoas}">
-			<p>
+			<p id="iw2x4">
 				<span th:text="${p.nome}"></span><br/>
 				<span th:text="${p.email}"></span><br/>
 				<a th:href="@{/excluir-pessoa/{id}(id=${p.id})}">excluir</a>

@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+  margin:0;
+}
+#ie1t{
+  font-family:Tahoma, Geneva, sans-serif;
+  font-weight:700;
+  margin:21.44px 10px 21.44px 0;
+  padding:21px 22px 32px 423px;
+  letter-spacing:5px;
+}
+#i6m7{
+  text-align:left;
+  padding:33px 46px 36px 433px;
+  margin:13px 0 79px 0;
+  display:flex;
+  position:relative;
+  top:14px;
+  right:14px;
+  left:-31px;
+}
+#iqaxv{
+  margin:0 12px 10px 0;
+}
+#in77{
+  margin:0 12px 10px 0;
+  padding:1px 19px 1px 2px;
+}
+#i4ek9{
+  height:25px;
+  border-radius:5px 5px 5px 5px;
+  position:relative;
+  border:2px outset rgba(24,93,193,0.8);
+  box-shadow:3px 3px 5px 0 rgba(27,69,239,0.81);
+}
